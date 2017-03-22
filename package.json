@@ -1,0 +1,31 @@
+{
+  "name": "drone-app-parrot",
+  "version": "1.0.0",
+  "description": "Rolling Spider Web APP NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aamping/drone-app-parrot.git"
+  },
+  "keywords": [
+    "Rolling",
+    "Spider",
+    "Web",
+    "App",
+    "Parrot",
+    "Nodejs"
+  ],
+  "author": "aamping",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aamping/drone-app-parrot/issues"
+  },
+  "homepage": "https://github.com/aamping/drone-app-parrot#README",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

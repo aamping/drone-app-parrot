@@ -1,0 +1,23 @@
+#control{
+ position: absolute;
+  z-index: 15;
+  margin-left: auto;
+  margin-up: auto;
+  margin: center;
+  
+  
+}
+
+.btn-info#moveUp{
+  background-color: blue;
+  border-color: blue;
+}
+
+.btn-info#moveDown{
+  background-color: red;
+  border-color: red;
+}
+
+.btn-info#moveLeft{
+  position: a
+}

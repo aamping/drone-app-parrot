@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*
+
+fa6800
+f28430
+e0e3cc
+a7d9d9
+6ad1e6
+
+*/
+#control{
+  text-align: center;
+  display: inline;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.btn-info{
+  border : none;
+}
+
+.btn-info#moveFlatTrim{
+  background-color: #fa6800;
+}
+
+.btn-info#moveFlatTrim:hover{
+  background-color: #e0e3cc;
+}
+
+.btn-info#moveUp{
+  text-align: center;
+  background-color: blue;
+}
+
+.btn-info#moveUp:hover {
+  opacity: 0.7;
+}
+
+.btn-info#moveDown{
+  text-align: center;
+  background-color: red;
+}
+
+.btn-info#moveLeft{
+
+}
+
+.btn-info#moveBackward{
+  text-align: center;
+  background-color: red;
+}

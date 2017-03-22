@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Express</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baking Bootstrap Snippets with Jade">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet"/>
+</head>
+
+<body style="padding-bottom:10rem;">
+    <div class="container">
+        <nav role="navigation" class="navbar navbar-default">
+            <div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#dropdown_menu" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a href="http://localhost:3000/#" class="navbar-brand">Drone Driver</a>
+            </div>
+            <div id="dropdown_menu" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="http://localhost:3000/index.html">Home</a></li>
+                    <li><a href="http://localhost:3000/about.html">About</a></li>
+                    <li><a href="http://localhost:3000/contact.html">Contact</a></li>
+                    <li class="dropdown"><a href="http://localhost:3000/#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Dropdown<span class="caret"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a href="http://localhost:3000/#">Action</a></li>
+                            <li><a href="http://localhost:3000/#">Another action</a></li>
+                            <li><a href="http://localhost:3000/#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="http://localhost:3000/#">Separated link</a></li>
+                            <li><a href="http://localhost:3000/#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="control" class="col-centered" >
+          <p>
+            <a name="Connecting" id="moveConnect" class="btn btn-info ">CONNECT</a>
+            <a name="Disconnecting" id="moveDisconnect" class="btn btn-info ">DISCONNECT</a>
+            <a name="Flat Trim" id="moveFlatTrim" class="btn btn-info ">FLAT TRIM</a>
+            <a name="Take Off" id="moveTakeOff" class="btn btn-info ">TAKE OFF</a>
+            <a name="Land" id="moveLand" class="btn btn-info ">LAND</a>
+            <a name="Emergency Land" id="moveEmergencyLand" class="btn btn-info ">EMERGENCY LAND</a>
+          </p>
+          <p id="Moves" class ="row">
+            <a name="Forward" id="moveForward" class="btn btn-info col-lg-1 col-lg-offset-1">FORWARD<a>
+            <a name="Upward" id="moveUp" class="btn btn-info col-lg-1 col-lg-offset-8">UPWARD<a>
+          </p>
+          <p class="row">
+            <a name="Leftward" id="moveLeft" class="btn btn-info col-lg-1 col-lg-offset-0">LEFTWARD</a>
+            <a name="Rightward" id="moveRight" class="btn btn-info col-lg-1 col-lg-offset-1">RIGHTWARD</a>
+            <a name="Left Turn" id="moveAntiClockRot" class="btn btn-info col-lg-1 col-lg-offset-6">LEFT TURN</a>
+            <a name="Right Turn" id="moveClockRot" class="btn btn-info btn btn-info col-lg-1 col-lg-offset-1">RIGHT TURN</a>
+          </p>
+          <p class="row">
+            <a name="Backward" id="moveBackward" class="btn btn-info col-lg-1 col-lg-offset-1">BACKWARD</a>
+            <a name="Downward" id="moveDown" class="btn btn-info col-lg-1 col-lg-offset-8">DOWNWARD</a>
+          </p>
+        </div>
+      </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+<script src="./js/request.js"></script>
+<script>
+  var butArray = document.querySelectorAll(".btn-info");
+  for (var i=0; i<butArray.length; i++) (function (){
+      var but = butArray[i];
+      but.addEventListener('click', function(){
+        makeRequest(but.id,but.name);
+        console.log('send');
+      });
+  })();
+</script>
+
+  <body id="logged-out">
+    <section id="chat">
+      <ul id="messages">
+      </ul><ul id="users">
+      </ul>
+      <form action="">
+        <input id="m" autocomplete="off" /><button>Send</button>
+      </form>
+    </section>
+    <section id="login">
+      <form action="">
+        <label for="u">Username</label>
+        <input id="u" autocomplete="off" autofocus />
+        <p>
+          <button>Login</button>
+        </p>
+      </form>
+    </section>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+
+</html>
